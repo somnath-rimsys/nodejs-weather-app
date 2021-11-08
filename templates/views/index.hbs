@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Page</title>
+    <link rel="shortcut icon" href="/img/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    {{>header}}
+    <main>
+      <h3 class="title">{{title}}</h3>
+      <div class="weather-info-container">
+        <div class="input-group">
+          <input type="text" placeholder="Ex. Kolkata" name="location" id="search-box">
+          <button type="button" id="search-btn">Search</button>
+        </div>
+      </div>
+    </main>
+    {{>footer}}
+
+    <script src="/js/weather.js"></script>
+  </body>
+</html>

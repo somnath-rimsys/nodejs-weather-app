@@ -1,5 +1,5 @@
 const request = require("request");
-const constant = require("../constant");
+const constant = require("./constant");
 
 const weather = (location, callback) => {
   location = encodeURIComponent(location);

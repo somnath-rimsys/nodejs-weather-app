@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Josefin Sans", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 32px;
+  background: rgb(139, 139, 139);
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+header .logo img {
+  width: 50px;
+}
+header .menu-items a {
+  text-decoration: none;
+  color: #222;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0px 10px;
+}
+main {
+  flex-grow: 1;
+  background: linear-gradient(rgb(139, 139, 139), rgb(255, 255, 255));
+}
+main .title {
+  text-align: center;
+  margin-top: 20px;
+}
+main .weather-info-container .input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0px;
+}
+main .weather-info-container .input-group input {
+  border: navajowhite;
+  outline: navajowhite;
+  padding: 8px 8px;
+}
+main .weather-info-container .input-group button {
+  border: navajowhite;
+  outline: navajowhite;
+  margin-left: 10px;
+  padding: 8px 8px;
+  cursor: pointer;
+}
+footer {
+  min-height: 100px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 50px;
+}
