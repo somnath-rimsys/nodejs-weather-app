@@ -66,3 +66,15 @@ footer {
 .weather-details {
   box-shadow: 2px 2px 4px #5a5a5a;
 }
+@media all and (max-width: 768px){
+  main .weather-block{
+    width: 90%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 769px){
+  main .weather-block{
+    width: 50%;
+    margin: auto;
+  }
+}

@@ -20,7 +20,6 @@ window.onload = () => {
           toast.show("error", data.message);
         } else if (data.status === "Success") {
           let weatherData = data;
-          console.log(weatherData);
           document.getElementById('temperature').innerHTML = data.current.temperature;
           document.getElementById('humidity').innerHTML = data.current.humidity;
           document.getElementById('wind_speed').innerHTML = data.current.wind_speed;
