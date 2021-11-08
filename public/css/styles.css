@@ -37,18 +37,18 @@ main .title {
   text-align: center;
   margin-top: 20px;
 }
-main .weather-info-container .input-group {
+main .weather-info-container .weather-input-group {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 32px 0px;
 }
-main .weather-info-container .input-group input {
+main .weather-info-container .weather-input-group input {
   border: navajowhite;
   outline: navajowhite;
   padding: 8px 8px;
 }
-main .weather-info-container .input-group button {
+main .weather-info-container .weather-input-group button {
   border: navajowhite;
   outline: navajowhite;
   margin-left: 10px;
@@ -62,4 +62,7 @@ footer {
   justify-content: flex-end;
   align-items: center;
   padding: 0px 50px;
+}
+.weather-details {
+  box-shadow: 2px 2px 4px #5a5a5a;
 }

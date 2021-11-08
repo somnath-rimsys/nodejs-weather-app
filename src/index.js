@@ -35,17 +35,22 @@ app.get("/help", (req, res) => {
 app.get("/weather", (req, res) => {
   if (!req.query.location) {
     return res.send({
-      message: "Location is missing from the query string.",
+      message: "Location is missing from the query string. Add location as query param. Ex: /weather?location=Kolkata",
+      status: 'Error'
     });
   }
   const location = req.query.location;
-  weather(location, (err, data) => {
-    if (err) {
-      return res.send(err);
+  weather(location, (error, data) => {
+    if (error) {
+      return res.send({
+        message: error,
+        status: 'Error'
+      });
     }
     res.send({
       location: data.body.location,
       current: data.body.current,
+      status: 'Success'
     });
   });
 });
