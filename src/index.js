@@ -55,6 +55,13 @@ app.get("/weather", (req, res) => {
   });
 });
 
+app.get("*", (req, res) => {
+  res.render('404', {
+    title: "404! Page Not found",
+    author: "Somnath Sardar",
+  });
+})
+
 app.listen(PORT, () => {
   console.log("Server is running at http://localhost:" + PORT);
 });
