@@ -10,7 +10,7 @@ const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 
-// Setup for handlebars engine and views location. 
+// Setup for handlebars engine and views location.
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
@@ -35,8 +35,9 @@ app.get("/help", (req, res) => {
 app.get("/weather", (req, res) => {
   if (!req.query.location) {
     return res.send({
-      message: "Location is missing from the query string. Add location as query param. Ex: /weather?location=Kolkata",
-      status: 'Error'
+      message:
+        "Location is missing from the query string. Add location as query param. Ex: /weather?location=Kolkata",
+      status: "Error",
     });
   }
   const location = req.query.location;
@@ -44,23 +45,30 @@ app.get("/weather", (req, res) => {
     if (error) {
       return res.send({
         message: error,
-        status: 'Error'
+        status: "Error",
       });
     }
     res.send({
       location: data.body.location,
       current: data.body.current,
-      status: 'Success'
+      status: "Success",
     });
   });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about", {
+    title: "About",
+    author: "Somnath Sardar",
+  });
+});
+
 app.get("*", (req, res) => {
-  res.render('404', {
+  res.render("404", {
     title: "404! Page Not found",
     author: "Somnath Sardar",
   });
-})
+});
 
 app.listen(PORT, () => {
   console.log("Server is running at http://localhost:" + PORT);

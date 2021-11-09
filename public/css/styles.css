@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap");
 
 * {
   margin: 0px;
@@ -12,22 +12,11 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 32px;
   background: rgb(139, 139, 139);
-  border-bottom: 1px solid rgb(197, 197, 197);
+  /* border-bottom: 1px solid rgb(197, 197, 197); */
 }
-header .logo img {
+header .navbar-brand img {
   width: 50px;
-}
-header .menu-items a {
-  text-decoration: none;
-  color: #222;
-  font-size: 17px;
-  font-weight: 600;
-  margin: 0px 10px;
 }
 main {
   flex-grow: 1;
@@ -63,18 +52,34 @@ footer {
   align-items: center;
   padding: 0px 50px;
 }
+footer p {
+  color: gray;
+}
 .weather-details {
   box-shadow: 2px 2px 4px #5a5a5a;
 }
-@media all and (max-width: 768px){
-  main .weather-block{
+@media all and (max-width: 768px) {
+  main .weather-block {
     width: 90%;
     margin: auto;
   }
+  .about-text {
+    margin-top: 30px;
+  }
 }
-@media all and (min-width: 769px){
-  main .weather-block{
+@media all and (min-width: 769px) {
+  main .weather-block {
     width: 50%;
     margin: auto;
   }
+}
+.logo-img {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-img img {
+  width: 100%;
+  border-radius: 50% 25%;
 }
